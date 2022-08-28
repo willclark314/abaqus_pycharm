@@ -10,7 +10,7 @@ except ImportError as e:
     from abaqusConstants import *
 
 
-environ['ABAQUS_BAT_PATH'] = 'D:\\SIMULIA\\Abaqus\\Commands\\abaqus'
+environ['ABAQUS_BAT_PATH'] = 'C:\\SIMULIA\\Abaqus\\Commands\\abaqus'
 environ['ABAQUS_BAT_SETTING'] = 'script'
 
 

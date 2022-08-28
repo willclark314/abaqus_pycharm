@@ -13,13 +13,13 @@ try:
     from import_file.odbSection import *
     from import_file.abaqusConstants import *
 except ImportError as e:
-    print(e, '\n\n\n\n\n\n')
+    print e, '\n\n\n\n\n\n'
     from odbAccess import *
     from odbMaterial import *
     from odbSection import *
     from abaqusConstants import *
 
-environ['ABAQUS_BAT_PATH'] = 'D:\\SIMULIA\\Abaqus\\Commands\\abaqus'
+environ['ABAQUS_BAT_PATH'] = 'C:\\SIMULIA\\Abaqus\\Commands\\abaqus'
 environ['ABAQUS_BAT_SETTING'] = 'script'
 
 

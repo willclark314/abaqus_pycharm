@@ -1,4 +1,5 @@
 from os import environ
+
 try:
     from import_file.abaqus import *
     from import_file.abaqusConstants import *
@@ -10,7 +11,7 @@ except ImportError:
     from caeModules import mesh
     from driverUtils import executeOnCaeStartup
 
-environ['ABAQUS_BAT_PATH'] = 'D:\\SIMULIA\\Abaqus\\Commands\\abaqus'
+environ['ABAQUS_BAT_PATH'] = 'C:\\SIMULIA\\Abaqus\\Commands\\abaqus'
 environ['ABAQUS_BAT_SETTING'] = 'noGUI'
 
 session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=300, height=140)
@@ -62,7 +63,7 @@ session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON,
 session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
     referenceRepresentation=OFF)
 mdb.models['Model-1'].Material(name='Material-1')
-mdb.models['Model-1'].materials['Material-1'].Elastic(table=((210000.0, 0.3), ))
+mdb.models['Model-1'].materials['Material-1'].Elastic(table=((210000.0, 0.3),))
 mdb.models['Model-1'].HomogeneousShellSection(name='Section-1',
                                               preIntegrate=OFF, material='Material-1', thicknessType=UNIFORM,
                                               thickness=0.15, thicknessField='', idealization=NO_IDEALIZATION,
